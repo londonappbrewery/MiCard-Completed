@@ -10,6 +10,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
+        //SafeArea is basically a padding widget, which adds any necessary padding to your app,
+        //based on the device it is running on.
+        //If your app’s widgets are overlaying any of the system’s features like notches, status bar, camera holes, or any other such features,
+        //then SafeArea would add padding around the app, as required.
         body: SafeArea(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -37,6 +41,9 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            //In Flutter, SizedBox widget is defined as a box with a specified size.
+            //Unlike Container, you cannot set color or decoration using SizedBox.
+            //The widget is only used for sizing the widget passed as child.
             SizedBox(
               height: 20.0,
               width: 150.0,
